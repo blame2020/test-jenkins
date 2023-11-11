@@ -47,9 +47,9 @@ pipeline {
     }
 
     post {
-        // always {
-        //     // TODO: Write something.
-        // }
+        always {
+            archiveArtifacts artifacts: '**'
+        }
         success {
             archiveArtifacts artifacts: 'hello/hello', fingerprint: true
         }
