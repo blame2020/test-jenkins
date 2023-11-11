@@ -56,7 +56,7 @@ pipeline {
             archiveArtifacts artifacts: '**'
         }
         success {
-            archiveArtifacts artifacts: 'hello/hello', fingerprint: true
+            archiveArtifacts artifacts: 'hello.tar.gz', fingerprint: true
         }
         //失敗時
         // failure {
