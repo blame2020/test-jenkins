@@ -44,6 +44,11 @@ pipeline {
         //         sh 'make test'
         //     }
         // }
+        stage('package') {
+            steps {
+                sh 'tar -C hello -czvf hello.tar.gz hello'
+            }
+        }
     }
 
     post {
