@@ -19,8 +19,10 @@ pipeline {
         }
 
         stage('build') {
-            steps {
-                sh 'go build -o example .'
+            dir('hello') {
+                steps {
+                    sh 'go build -o hello .'
+                }
             }
         }
         // stage('check') {
@@ -49,7 +51,7 @@ pipeline {
         //     // TODO: Write something.
         // }
         success {
-            archiveArtifacts artifacts: 'sample', fingerprint: true
+            archiveArtifacts artifacts: 'hello/hello', fingerprint: true
         }
         //失敗時
         // failure {
