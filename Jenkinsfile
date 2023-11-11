@@ -52,9 +52,9 @@ pipeline {
     }
 
     post {
-        always {
-            archiveArtifacts artifacts: '**'
-        }
+        // always {
+        //     archiveArtifacts artifacts: '**'
+        // }
         success {
             archiveArtifacts artifacts: 'hello.tar.gz', fingerprint: true
         }
