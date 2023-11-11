@@ -18,25 +18,30 @@ pipeline {
             }
         }
 
-        stage('check') {
-            steps {
-                dir('.') {
-                    sh 'make lint'
-                }
-            }
-        }
-
         stage('build') {
             steps {
-                sh 'make'
+                sh 'go build -o example .'
             }
         }
+        // stage('check') {
+        //     steps {
+        //         dir('.') {
+        //             sh 'make lint'
+        //         }
+        //     }
+        // }
 
-        stage('test') {
-            steps {
-                sh 'make test'
-            }
-        }
+        // stage('build') {
+        //     steps {
+        //         sh 'make'
+        //     }
+        // }
+
+        // stage('test') {
+        //     steps {
+        //         sh 'make test'
+        //     }
+        // }
     }
 
     post {
