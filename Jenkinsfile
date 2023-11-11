@@ -40,15 +40,15 @@ pipeline {
     }
 
     post {
-        always {
-            // TODO: Write something.
-        }
-        success{
+        // always {
+        //     // TODO: Write something.
+        // }
+        success {
             archiveArtifacts artifacts: 'sample', fingerprint: true
         }
         //失敗時
-        failure{
-            // TODO: Write something.
-        }
+        // failure {
+        //     // TODO: Write something.
+        // }
     }
 }
