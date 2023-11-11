@@ -19,8 +19,8 @@ pipeline {
         }
 
         stage('build') {
-            dir('hello') {
-                steps {
+            steps {
+                dir('hello') {
                     sh 'go build -o hello .'
                 }
             }
