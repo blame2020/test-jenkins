@@ -1,0 +1,12 @@
+linters:
+  enable:
+    - asciicheck
+    - bodyclose
+    - errname
+    - durationcheck
+    - exhaustive
+    - exportloopref
+    - forcetypeassert
+    - goimports
+    - gosec
+    - wsl
